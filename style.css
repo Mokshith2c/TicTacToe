@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI Emoji", sans-serif;
+}
+h1 {
+    font-family: 'Press Start 2P', cursive;    
+    font-size: 6vmin;
+    color: #ffffc7;
+    text-shadow: 2px 2px 5px #000, 0 0 10px #b0413e;
+    margin-bottom: 2rem;
+}
+
+
+body{
+    background-color: #20504E;
+    text-align: center;
+}
+
+.container{
+    height:70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 15%;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-size: 8vmin;
+    color: #b0413e;
+    background-color: #ffffc7;
+    transition: transform 0.2s ease;
+}
+
+
+#res-btn, #new-btn{
+    font-family: 'Fredoka One', cursive;
+    padding : 0.8rem 1rem;
+    font-size: 1.15rem;
+    background-color: #333;
+    color: #ffffc7;
+    border-radius: 0.8rem;
+    border: none;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+#res-btn:hover, #new-btn:hover {
+    background-color: #555; 
+    transform: scale(1.05); 
+}
+
+#msg{
+    color: #ffffc7;
+    font-size: 5vmin;
+}
+
+
+.msg-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:  #2b2b2b;
+    padding: 2rem 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+.hide{
+    display:none;
+}
+h1 {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+ 50% { transform: translateY(-6px); }
+}
+
+.box:hover {
+  transform: translateY(-8px) rotate(3deg);
+  background-color: #ffe066;
+}
+
+.winner-box {
+    background-color: #90ee90;
+    transform: scale(1.1);    
+    transition: all 0.3s ease;
+}
+
+.winner-box {
+    animation: spinWin 2s linear infinite;
+    background-color: #98fb98;
+}
+@keyframes spinWin {
+    0% { transform: rotate(0deg) scale(1.1); }
+    25%{ transform: rotate(3deg) scale(1.1); }
+    75%{ transform: rotate(-3deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1.1); }
+
+}
+
